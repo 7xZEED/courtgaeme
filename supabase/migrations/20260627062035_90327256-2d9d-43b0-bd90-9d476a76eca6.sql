@@ -1,0 +1,2 @@
+ALTER TABLE public.cases DROP CONSTRAINT cases_category_check;
+ALTER TABLE public.cases ADD CONSTRAINT cases_category_check CHECK (category = ANY (ARRAY['bf_gf'::text, 'situationship'::text, 'friend'::text, 'ex_to_ex'::text, 'family'::text, 'group_chat'::text, 'gaming'::text]));
